@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
     s.homepage = "https://cossacklabs.com"
     
     # TODO: change on release :)
-    s.source = { :git => "https://github.com/cossacklabs/acra.git", :commit => '46c9a06289706dd0bc0910ece5be8c06200e50da'}
+    s.source = { :git => "https://github.com/cossacklabs/acra.git", :commit => 'd289875e36a4f3be61a0f307dfa19637d45cc321'}
 
     s.license = { :type => 'Apache 2.0'}    
     s.author = {'cossacklabs' => 'info@cossacklabs.com'}
@@ -24,4 +24,7 @@ Pod::Spec.new do |s|
     # Enable bitcode
     s.ios.pod_target_xcconfig = {'ENABLE_BITCODE' => 'YES' }
 
+    s.ios.xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/themis/src" "${PODS_ROOT}/themis/src/wrappers/themis/Obj-C"'}
+    s.osx.xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/themis/src" "${PODS_ROOT}/themis/src/wrappers/themis/Obj-C"'}
+    
 end
